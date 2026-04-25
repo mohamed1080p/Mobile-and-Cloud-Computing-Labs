@@ -1,0 +1,8 @@
+Containers are significantly better for microservices. That's because:
+
+Startup time: Containers start in seconds. Microservices need to scale up and down rapidly — waiting 60 seconds for a VM to boot is unacceptable.
+Resource efficiency: A container runs with only 2 processes vs a VM's 9+. In a microservices system with dozens of services, this difference multiplies dramatically.
+Isolation per service: Each microservice can be packaged in its own container with its exact dependencies, avoiding version conflicts between services.
+Orchestration: Tools like Kubernetes are built around containers, enabling automatic scaling, health checks, and rolling deployments that would be far heavier with VMs.
+
+VMs are still preferred when you need strong security isolation (multi-tenant environments) or when services require a different OS kernel than the host.
