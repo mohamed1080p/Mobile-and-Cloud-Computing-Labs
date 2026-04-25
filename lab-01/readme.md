@@ -1,7 +1,7 @@
 # Lab 1: Exploring Cloud Virtualization and Data Center Architecture
 
 **Course:** Cloud and Mobile Computing  
-**Student:** Mohamed  
+**Student:** Mohamed Bahaa Eldin (SE2) 
 **Environment:** Windows 11 + WSL2 (Ubuntu 24.04) + Docker Desktop + AWS EC2
 
 ---
