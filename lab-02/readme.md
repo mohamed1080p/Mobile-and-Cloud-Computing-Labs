@@ -1,7 +1,4 @@
-# Lab 2: Distributed Consistency and Consensus in the Cloud
-
-**Course:** Cloud and Mobile Computing  
-**Student:** Mohamed  
+# Lab 2: Distributed Consistency and Consensus in the Cloud 
 **Environment:** Windows 11 + WSL2 (Ubuntu 24.04) + Docker Desktop v29.4.0
 
 ---
