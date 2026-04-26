@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab3-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lab3-web
+  template:
+    metadata:
+      labels:
+        app: lab3-web
+    spec:
+      nodeSelector:
+        node-role: general
+      containers:
+      - name: web
+        image: lab3-multi
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
