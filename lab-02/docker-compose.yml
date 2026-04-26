@@ -1,0 +1,25 @@
+services:
+  redis-node1:
+    image: redis:7
+    container_name: redis-node1
+    ports:
+      - "6379:6379"
+
+  redis-node2:
+    image: redis:7
+    container_name: redis-node2
+    command: redis-server --replicaof redis-node1 6379
+    ports:
+      - "6380:6379"
+    depends_on:
+      - redis-node1
+
+  etcd:
+    image: quay.io/coreos/etcd:v3.5.9
+    container_name: etcd
+    command:
+      - etcd
+      - --advertise-client-urls=http://0.0.0.0:2379
+      - --listen-client-urls=http://0.0.0.0:2379
+    ports:
+      - "2379:2379"
